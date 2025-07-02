@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(243, 248, 252);
+}
