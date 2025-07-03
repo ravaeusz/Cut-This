@@ -1,13 +1,14 @@
 "use client"
 import {useEffect, useState} from 'react'
 import {postLogin, postRegister} from '../../services/api'
-import { redirect } from 'next/navigation'
+import {redirect} from 'next/navigation'
 
 import {useSelector, useDispatch} from 'react-redux'
 import { RootState } from '../../redux/store'
 
 
 export default function Login() {
+
 
   const currentUser = useSelector((state: RootState) => state.user.currentUser)
   const isLogged = useSelector((state : RootState) => state.user.isLogged)

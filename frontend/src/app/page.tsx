@@ -1,5 +1,6 @@
 "use client"
 
+
 interface Grupos {
   user_nome: string,
   grupo_user: number,
@@ -7,10 +8,9 @@ interface Grupos {
   grupo_nome : string
 }
 
-import Image from "next/image";
-import {useState, useEffect} from 'react'
-import {useSelector, useDispatch} from 'react-redux'
-import { RootState } from '../redux/store'
+import {useState} from 'react'
+import {useSelector} from 'react-redux'
+import {RootState } from '../redux/store'
 
 import {getGroup} from '../services/api'
 
@@ -21,8 +21,12 @@ export default function Home() {
   const [ativo , setAtivo] = useState(false)
   const [grupos, setGrupos]  = useState<Grupos[]>([])
 
-  const currentUser = useSelector((state: RootState) => state.user.currentUser)
+
+  const currentGroup = useSelector((state: RootState) => state.group.currentGroup)
   const isLogged = useSelector((state : RootState) => state.user.isLogged)
+
+  console.log(currentGroup);
+  
 
   function handleCreateGroup(){
     setAtivo(true)

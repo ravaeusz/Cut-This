@@ -1,4 +1,3 @@
-import { current } from "@reduxjs/toolkit";
 
 interface UserState {
     currentUser: any,
@@ -7,7 +6,7 @@ interface UserState {
 
 const initialState : UserState ={
     currentUser: null, 
-    isLogged: false
+    isLogged: true
 }
 
 const userReducer = (state = initialState, action : any) => {
