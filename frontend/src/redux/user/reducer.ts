@@ -1,12 +1,12 @@
 
 interface UserState {
-    currentUser: any,
+    currentUser: [],
     isLogged: boolean;
 }
 
 const initialState : UserState ={
-    currentUser: null, 
-    isLogged: true
+    currentUser: [], 
+    isLogged: false
 }
 
 const userReducer = (state = initialState, action : any) => {

@@ -54,8 +54,9 @@ export default function Login() {
     setStatusMessage("sucess")
     dispatch({
       type: "user/login",
-      payload:  data.user_nome 
+      payload:  data.rows
     })
+    
     console.log(currentUser);
     
   }
@@ -87,10 +88,15 @@ export default function Login() {
     setStatusMessage("sucess")
     dispatch({
       type: "user/login",
-      payload:  data.user_nome 
+      payload:  data.rows
     })
     }
   }
+
+  console.log(currentUser);
+  console.log(isLogged);
+  
+  
 
   return (
     <>

@@ -31,9 +31,9 @@ import { RootState } from '../redux/store'
             {isLogged ? 
             <div className="flex flex-rows gap-5 items-center max-md:flex-col max-md:gap-1">
             
-            <h1 className="text-[20px] text-blue-400 font-bold font-sans py-2 items-center max-md:text-[14px]">{currentUser}</h1>
+            <h1 className="text-[20px] text-blue-400 font-bold font-sans py-2 items-center max-md:text-[14px]">{currentUser.user_nome}</h1>
            
-            <button onClick={handleLogout} className="cursor-pointer text-[20px] text-blue-400 font-bold font-sans py-2 items-center max-md:text-[14px]">Sair</button>
+            <button onClick={handleLogout} className="cursor-pointer text-[20px] text-blue-400 font-bold font-sans py-2 items-center max-ms:text-[14px]">Sair</button>
             </div>
             :
             <a href="/login" className="text-[18px] text-blue-400 font-bold font-sans p-2">Entrar / Registre- se</a>

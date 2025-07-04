@@ -2,9 +2,9 @@ import { Request, Response } from 'express';
 import {StoreGroup, DeleteGroup, UpdateGroup, GetGroup, UserGroup, ShowGroup} from '../model/GroupModel'
 
 export const groupController = async (req: Request, res: Response) =>{
-    const {grupo_nome, user_id} = req.body
+    const {grupo_nome, user_id, grupo_inicio, grupo_final} = req.body
 
-    const result = await StoreGroup(grupo_nome, user_id)
+    const result = await StoreGroup(grupo_nome, user_id, grupo_inicio, grupo_final)
     
    if (!result){
     res.json({"error":"Grupo já cadastrado"})
@@ -30,9 +30,9 @@ export const deleteGroupController = async (req: Request, res: Response) => {
 }
 export const updateGroupController = async (req: Request, res: Response) => {
     const group_id = req.params.id;
-    const {grupo_nome, user_id} = req.body
+    const {grupo_nome, user_id, grupo_inicio, grupo_final} = req.body
 
-    const rows = await UpdateGroup(group_id, grupo_nome, user_id)
+    const rows = await UpdateGroup(group_id, grupo_nome, user_id, grupo_inicio, grupo_final)
     if(!rows){
         res.json({"error":"Não foi possivel editar grupo"})
     }

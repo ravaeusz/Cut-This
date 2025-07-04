@@ -18,7 +18,7 @@ export const registerController = async (req: Request, res: Response) =>{
    }
    res.json(
     {
-      user_nome,
+      rows,
        "sucess":"Usuário cadastrado!" 
     }
    )
@@ -40,7 +40,7 @@ export const loginController = async (req: Request, res: Response) => {
    }
    res.json(
     {
-      user_nome,
+      rows,
       "sucess":"Usuário logado!" 
     }
    )
